@@ -24,5 +24,5 @@ app.use("/", webRoutes);
 
 // Server
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on https://cahtapp.netlify.app:${PORT}`);
 });
