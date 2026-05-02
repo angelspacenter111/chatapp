@@ -11,7 +11,7 @@ router.post("/apiendpoint", async (req, res) => {
 
     const question = req.body.message;
 
-    const GEMINI_API_KEY = "AIzaSyClYlh07G0M8jvBjM_owwSL8NYnyHTBtFQ";
+    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
     const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
     const response = await ai.models.generateContent({
