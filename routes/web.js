@@ -16,10 +16,10 @@ router.post("/apiendpoint", async (req, res) => {
 
     const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
-        systemInstruction: "You are a helpful assistant. Every response should be short, concise, and within a maximum of 150–200 words. Avoid long explanations.",
-        contents: [{ role: "user", parts: [{ text: `${question} (Answer in brief, under 200 words)` }] }],
+        systemInstruction: "You are a helpful assistant. Every response should be short, concise, and within a maximum of 100–150 words. Avoid long explanations.",
+        contents: [{ role: "user", parts: [{ text: `${question} (Answer in brief, under 150 words)` }] }],
         generationConfig: {
-            maxOutputTokens: 300, // Takriban 450-500 words ke liye kaafi hai
+            maxOutputTokens: 150, // Takriban 450-500 words ke liye kaafi hai
             temperature: 0.5,
         },
     });
