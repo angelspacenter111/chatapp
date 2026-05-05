@@ -15,7 +15,7 @@ router.post("/apiendpoint", async (req, res) => {
     const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
 
     const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
+        model: "gemini-3.1-pro-preview",
         systemInstruction: "You are a helpful assistant. Every response should be short, concise, and within a maximum of 100–150 words. Avoid long explanations.",
         contents: [{ role: "user", parts: [{ text: `${question} (Answer in brief, under 150 words)` }] }],
         generationConfig: {
